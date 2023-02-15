@@ -1,0 +1,31 @@
+body {
+  font-family: "PT Mono", monospace;
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f7fe;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1.5px solid grey;
+  border-radius: 15px;
+  background-color: white;
+}
+
+h1 {
+    color: #5B5B60;
+    line-height: 30px;
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
