@@ -45,6 +45,6 @@ function displayTemperature(response) {
 
 let apiKey = "72367c58a6b678830274a8ecc81b81e8";
 let city = "Fort Lauderdale";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&metrics=imperial`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
 axios.get(apiUrl).then(displayTemperature);
