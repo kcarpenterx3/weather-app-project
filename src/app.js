@@ -22,7 +22,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector(".temperature");
   let cityElement = document.querySelector("#city");
   let weatherDescriptionElement = document.querySelector(
@@ -40,7 +39,8 @@ function displayTemperature(response) {
 }
 
 let apiKey = "72367c58a6b678830274a8ecc81b81e8";
+let city = "Fort Lauderdale";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=
-fort lauderdale&appid=${apiKey}&units=imperial`;
+${city}&appid=${apiKey}&units=imperial`;
 
 axios.get(apiUrl).then(displayTemperature);
