@@ -5,22 +5,22 @@ body {
 }
 
 h1 {
-    color: #5B5B60;
-    line-height: 30px;
-    margin-bottom: 0;
+  color: #5b5b60;
+  line-height: 30px;
+  margin-bottom: 0;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    list-style: none;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    text-transform: capitalize;
+  list-style: none;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
 }
 
 .weather-app {
@@ -33,22 +33,22 @@ li {
 }
 
 .weather-temperature {
-    font-size: 30px;
-    padding-bottom: 30px;
-    padding-top: 10px;
+  font-size: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .current-temperature {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .units {
-    position: relative;
-    font-size: 16px;
-    top: -30px;
-    color: black;
+  position: relative;
+  font-size: 16px;
+  top: -30px;
+  color: black;
 }
 
-a  {
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
