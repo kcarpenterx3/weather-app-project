@@ -22,16 +22,17 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-    console.log(response)
+    console.log(response.data)
   let temperatureElement = document.querySelector(".temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   let dateElement = document.querySelector("#date");
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
-  descriptionElement = response.data.weather[0].description;
+  descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -39,7 +40,6 @@ function displayTemperature(response) {
 
 let apiKey = "72367c58a6b678830274a8ecc81b81e8";
 let city = "fort lauderdale";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${apiKey}&metrics=imperial`;
 
 axios.get(apiUrl).then(displayTemperature);
