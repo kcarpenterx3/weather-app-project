@@ -22,25 +22,24 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
+    console.log(response)
   let temperatureElement = document.querySelector(".temperature");
   let cityElement = document.querySelector("#city");
-  let weatherDescriptionElement = document.querySelector(
-    "#weather-description"
-  );
+  let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   let dateElement = document.querySelector("#date");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
-  weatherDescriptionElement = response.data.weather[0].description;
+  descriptionElement = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let apiKey = "72367c58a6b678830274a8ecc81b81e8";
-let city = "Fort Lauderdale";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=
-${city}&appid=${apiKey}&units=imperial`;
+let city = "fort lauderdale";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
 
 axios.get(apiUrl).then(displayTemperature);
