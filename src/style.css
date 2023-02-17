@@ -33,13 +33,9 @@ li {
 }
 
 .weather-temperature {
-  font-size: 30px;
+  font-size: 40px;
   padding-bottom: 30px;
   padding-top: 10px;
-}
-
-.current-temperature {
-  font-size: 60px;
 }
 
 .units {
