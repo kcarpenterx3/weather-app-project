@@ -40,8 +40,6 @@ li {
   font-size: 40px;
   padding-bottom: 30px;
   padding-top: 10px;
-  position: relative;
-  top: -80px;
 }
 
 .units {
@@ -62,7 +60,7 @@ text-align: center;
 .weather-forecast-day {
   opacity: .7;
 }
-.temperature-min {
+.temperature-max {
   font-weight: bold;
 }
 
@@ -73,9 +71,8 @@ a {
 }
 
 #icon {
-  position: relative;
-  left: 125px;
-  top: 75px;
+  display: flex;
+  float: right;
 }
 
 #open-source:hover {
