@@ -28,7 +28,7 @@ li {
 }
 
 .weather-app {
-  max-width: 575px;
+  max-width: 550px;
   margin: 0 auto;
   padding: 20px;
   border: 1.5px solid grey;
@@ -68,6 +68,10 @@ a {
   text-decoration: none;
   color: black;
   cursor: default;
+}
+
+#search-form {
+  text-align: center;
 }
 
 #icon {
