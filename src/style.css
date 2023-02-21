@@ -20,7 +20,6 @@ li {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  text-transform: capitalize;
 }
 
 .container {
@@ -28,7 +27,7 @@ li {
 }
 
 .weather-app {
-  max-width: 550px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   border: 1.5px solid grey;
@@ -77,6 +76,10 @@ a {
 #icon {
   display: flex;
   float: right;
+}
+
+#description {
+  text-transform: capitalize;
 }
 
 #open-source:hover {
