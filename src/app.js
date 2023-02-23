@@ -100,6 +100,17 @@ function displayTemperature(response) {
   getForcast(response.data.coord);
 }
 
+function showPosition(position) {
+  console.log(position.coords.latitude);
+  console.log(position.coords.longitude);
+
+  let apiKey = "8944afa6845bd7c413a687258d3211ef";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showPosition);
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
 function search(city) {
   let apiKey = "72367c58a6b678830274a8ecc81b81e8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -131,6 +142,9 @@ function showFahrenheitTemperature(event) {
 }
 
 let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+let current = document.querySelector("#current-position");
 form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
